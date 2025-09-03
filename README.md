@@ -8,7 +8,7 @@ The **LISA Traffic Light Dataset** from Kaggle is used for training and evaluati
 
 - **Source**: [LISA Traffic Light Dataset](https://www.kaggle.com/datasets/mbornoe/lisa-traffic-light-dataset) by Mikkel Bornoe.
 - **Content**:
-  - **Images**: Approximately 16,000 images of traffic lights captured in urban environments.
+  - **Images**: Approximately 43,007 images with 113,888 annotated traffic lights captured in urban environments.
   - **Sequences**: The dataset is divided into day and night sequences:
     - **daySequence1**: Daytime images with annotations for traffic light states.
     - **daySequence2**: Additional daytime images with similar annotations.
@@ -27,15 +27,15 @@ The **LISA Traffic Light Dataset** from Kaggle is used for training and evaluati
   - **Image Format**: PNG files.
   - **Resolution**: Varies (typically 1280x960 pixels).
   - **Conditions**: Images capture diverse conditions, including different lighting (day, night), weather, and angles.
-- **Size**: The dataset occupies approximately 4.5 GB when extracted.
+- **Size**: The dataset occupies approximately 5.7 GB when extracted.
 - **Directory Structure**:
   ```
-  data/
+  dataset/
   ├── daySequence1/
   ├── daySequence2/
   ├── dayClip1/
   ├── ...
-  ├── dayClip13/
+  ├── dayClip9/
   ├── nightSequence1/
   ├── nightSequence2/
   ├── nightClip1/
