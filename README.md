@@ -145,11 +145,9 @@ traffic-light-classification/
 ## Training Curves
 The following plots show the model's performance during training:
 
-### Accuracy
-![Accuracy Curve](visuals/accuracy_curve.png)
+![Version 1_Training Curves](visuals/v1_acc-curve.png)
 
-### Loss
-![Loss Curve](visuals/loss_curve.png)
+![Version 1_Training Curves](visuals/v2_acc-curve.png)
 
 ## Contributing
 Contributions are welcome! Please:
