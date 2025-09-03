@@ -130,24 +130,26 @@ traffic-light-classification/
   - Optimizer: Adam
   - Loss: Categorical Crossentropy
   - Batch Size: 32
-  - Epochs: 20 (adjustable in `train.py`)
+  - Epochs: 50
+  - early_stopping: patience=5
 
 ### Model Versions
 - **Version 1**:
-  - **Dataset Used**: `daySequence1` and `daySequence2`.
-  - **Accuracy**: 0.81 on the test set.
+  - **Only Using**: `daySequence1` and `daySequence2`.
   - **Description**: The initial model was trained on a subset of the dataset, focusing on daytime sequences. It achieved moderate performance but was limited by the smaller dataset size and lack of diversity in lighting conditions.
 
 - **Version 2**:
-  - **Dataset Used**: `daySequence1`, `daySequence2`, `dayClip1`, `dayClip2`, `dayClip3`, `dayClip4`, `dayClip5`.
-  - **Accuracy**: 0.99 on the test set.
+  - **Only Using**: `daySequence1`, `daySequence2`, `dayClip1`, `dayClip2`, `dayClip3`, `dayClip4`, `dayClip5`.
   - **Description**: The improved model incorporates additional daytime clips, significantly increasing the dataset size and diversity. This led to a substantial improvement in accuracy, making the model more robust for daytime scenarios.
 
-## Results
-- **Version 1 Accuracy**: 0.81 (using `daySequence1` and `daySequence2`).
-- **Version 2 Accuracy**: 0.99 (using `daySequence1`, `daySequence2`, `dayClip1...5` ).
-- **Performance**: Version 2 shows superior performance due to the inclusion of more diverse daytime data. Nighttime performance is not yet evaluated, as the models focus on daytime sequences.
-- Visualizations and metrics are saved in the `notebooks/` directory.
+## Training Curves
+The following plots show the model's performance during training:
+
+### Accuracy
+![Accuracy Curve](visuals/accuracy_curve.png)
+
+### Loss
+![Loss Curve](visuals/loss_curve.png)
 
 ## Contributing
 Contributions are welcome! Please:
