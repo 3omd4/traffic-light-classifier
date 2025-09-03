@@ -64,7 +64,8 @@ traffic-light-classification/
 │
 ├── dataset/                     # Directory for LISA Traffic Light Dataset
 ├── models/                   # Directory to save trained models
-├── notebooks/                # Jupyter notebooks for data exploration and analysis
+├── notebooks/
+├── processed/           # Jupyter notebooks for data exploration and analysis
 ├── README.md                 # Project documentation
 └── requirements.txt          # List of dependencies
 ```
