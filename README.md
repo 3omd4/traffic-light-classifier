@@ -53,17 +53,6 @@ The **LISA Traffic Light Dataset** from Kaggle is used for training and evaluati
 
 Download the dataset from [Kaggle](https://www.kaggle.com/datasets/mbornoe/lisa-traffic-light-dataset) and extract it into the `data/` directory.
 
-## Prerequisites
-- Python 3.8+
-- Libraries:
-  - TensorFlow/Keras (for ResNet-50)
-  - NumPy
-  - Pandas
-  - OpenCV
-  - Matplotlib
-  - Scikit-learn
-- A GPU is recommended for faster training.
-
 Install dependencies using:
 ```bash
 pip install tensorflow numpy pandas opencv-python matplotlib scikit-learn
@@ -73,13 +62,9 @@ pip install tensorflow numpy pandas opencv-python matplotlib scikit-learn
 ```
 traffic-light-classification/
 │
-├── data/                     # Directory for LISA Traffic Light Dataset
+├── dataset/                     # Directory for LISA Traffic Light Dataset
 ├── models/                   # Directory to save trained models
 ├── notebooks/                # Jupyter notebooks for data exploration and analysis
-├── src/                      # Source code for preprocessing, training, and evaluation
-│   ├── preprocess.py         # Script for data preprocessing
-│   ├── train.py              # Script for model training
-│   ├── evaluate.py           # Script for model evaluation
 ├── README.md                 # Project documentation
 └── requirements.txt          # List of dependencies
 ```
