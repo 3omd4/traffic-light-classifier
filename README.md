@@ -8,7 +8,7 @@ The **LISA Traffic Light Dataset** from Kaggle is used for training and evaluati
 
 - **Source**: [LISA Traffic Light Dataset](https://www.kaggle.com/datasets/mbornoe/lisa-traffic-light-dataset) by Mikkel Bornoe.
 - **Content**:
-  - **Images**: Approximately 16,000 images of traffic lights captured in urban environments.
+  - **Images**: Approximately 43,007 images with 113,888 annotated traffic lights captured in urban environments.
   - **Sequences**: The dataset is divided into day and night sequences:
     - **daySequence1**: Daytime images with annotations for traffic light states.
     - **daySequence2**: Additional daytime images with similar annotations.
@@ -27,15 +27,15 @@ The **LISA Traffic Light Dataset** from Kaggle is used for training and evaluati
   - **Image Format**: PNG files.
   - **Resolution**: Varies (typically 1280x960 pixels).
   - **Conditions**: Images capture diverse conditions, including different lighting (day, night), weather, and angles.
-- **Size**: The dataset occupies approximately 4.5 GB when extracted.
+- **Size**: The dataset occupies approximately 5.7 GB when extracted.
 - **Directory Structure**:
   ```
-  data/
+  dataset/
   ├── daySequence1/
   ├── daySequence2/
   ├── dayClip1/
   ├── ...
-  ├── dayClip13/
+  ├── dayClip9/
   ├── nightSequence1/
   ├── nightSequence2/
   ├── nightClip1/
@@ -53,17 +53,6 @@ The **LISA Traffic Light Dataset** from Kaggle is used for training and evaluati
 
 Download the dataset from [Kaggle](https://www.kaggle.com/datasets/mbornoe/lisa-traffic-light-dataset) and extract it into the `data/` directory.
 
-## Prerequisites
-- Python 3.8+
-- Libraries:
-  - TensorFlow/Keras (for ResNet-50)
-  - NumPy
-  - Pandas
-  - OpenCV
-  - Matplotlib
-  - Scikit-learn
-- A GPU is recommended for faster training.
-
 Install dependencies using:
 ```bash
 pip install tensorflow numpy pandas opencv-python matplotlib scikit-learn
@@ -73,15 +62,13 @@ pip install tensorflow numpy pandas opencv-python matplotlib scikit-learn
 ```
 traffic-light-classification/
 │
-├── data/                     # Directory for LISA Traffic Light Dataset
-├── models/                   # Directory to save trained models
-├── notebooks/                # Jupyter notebooks for data exploration and analysis
-├── src/                      # Source code for preprocessing, training, and evaluation
-│   ├── preprocess.py         # Script for data preprocessing
-│   ├── train.py              # Script for model training
-│   ├── evaluate.py           # Script for model evaluation
-├── README.md                 # Project documentation
-└── requirements.txt          # List of dependencies
+├── lisa_raw/                  # Directory for extracted dataset
+├── processed/                 # Directory for cropped& preprocessed dataset
+├── dataset/                   # Directory for Ready to use dataset
+├── models/                    # Directory for save trained models
+├── visuals/                   # Directory for saved plots& curves
+├── notebooks/                 # Directory for Jupyter notebooks for data exploration and analysis
+├── README.md                  # Project documentation
 ```
 
 ## Setup
@@ -145,11 +132,9 @@ traffic-light-classification/
 ## Training Curves
 The following plots show the model's performance during training:
 
-### Accuracy
-![Accuracy Curve](visuals/accuracy_curve.png)
+![Version 1_Training Curves](visuals/v1_acc-curve.png)
 
-### Loss
-![Loss Curve](visuals/loss_curve.png)
+![Version 1_Training Curves](visuals/v2_acc-curve.png)
 
 ## Contributing
 Contributions are welcome! Please:
