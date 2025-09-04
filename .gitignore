@@ -13,7 +13,7 @@ dataset/
 lisa_raw/
 
 # Saved models
-*.h5
+#*.h5
 *.ckpt
 
 # OS files
