@@ -62,12 +62,13 @@ pip install tensorflow numpy pandas opencv-python matplotlib scikit-learn
 ```
 traffic-light-classification/
 │
-├── dataset/                     # Directory for LISA Traffic Light Dataset
-├── models/                   # Directory to save trained models
-├── notebooks/
-├── processed/           # Jupyter notebooks for data exploration and analysis
-├── README.md                 # Project documentation
-└── requirements.txt          # List of dependencies
+├── lisa_raw/                  # Directory for extracted dataset
+├── processed/                 # Directory for cropped& preprocessed dataset
+├── dataset/                   # Directory for Ready to use dataset
+├── models/                    # Directory for save trained models
+├── visuals/                   # Directory for saved plots& curves
+├── notebooks/                 # Directory for Jupyter notebooks for data exploration and analysis
+├── README.md                  # Project documentation
 ```
 
 ## Setup
